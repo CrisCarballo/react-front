@@ -8,7 +8,11 @@ function BotonVolver() {
     navigate(-1);
   };
 
-  return <Button onClick={handleGoBack}>Volver</Button>;
+  return (
+    <Button type="primary" onClick={handleGoBack}>
+      Volver
+    </Button>
+  );
 }
 
 export default BotonVolver;

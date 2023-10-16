@@ -1,14 +1,18 @@
-import MenuUsuario from "./menu/MenuUsuario";
-import TabMenu from "./contenido/TabMenu";
-import "./contenedorPrincipal.css";
+import { Layout } from "antd";
+import Navbar from "./Navbar";
+import Rutas from "../../Rutas";
+import "./layout.css"
 
-function ContenedorPrincipal() {
-  return (
-    <div className="contenedor">
-      <TabMenu /> {/* <- Carpeta contenido */}
-      <MenuUsuario /> {/* <- Carpeta menu */}
-    </div>
-  );
-}
+const { Header, Content } = Layout;
 
+const ContenedorPrincipal = () => (
+  <Layout>
+    <Header className="navbar_contenedor">
+      <Navbar />
+    </Header>
+    <Content className="contenido_rutas">
+      <Rutas />
+    </Content>
+  </Layout>
+);
 export default ContenedorPrincipal;

@@ -1,0 +1,19 @@
+.navbar_contenedor {
+  background-color: rgb(18, 6, 29);
+  border-radius: 7px 7px 0px 0px;
+  padding: 10px;
+}
+
+.contenido_rutas {
+  background: rgb(130, 0, 255);
+  background: linear-gradient(
+    0deg,
+    rgb(132, 0, 255) 0%,
+    rgb(25, 0, 49) 100%
+  );
+  border-radius: 0px 0px 7px 7px;
+  padding: 10px;
+  min-height: 85vh;
+  color: white;
+  text-align: center;
+}

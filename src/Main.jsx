@@ -1,10 +1,12 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import Rutas from './Rutas';
-import "./main.css";
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { BrowserRouter } from "react-router-dom";
+import ContenedorPrincipal from "./views/layout/ContenedorPrincipal";
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <Rutas /> {/* la ruta principal, osea "/" te lleva al componente <ContenedorPrincipal /> */}
-  </React.StrictMode>,
-)
+    <BrowserRouter>
+      <ContenedorPrincipal />
+    </BrowserRouter>
+  </React.StrictMode>
+);

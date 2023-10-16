@@ -1,9 +1,59 @@
 import BotonVolver from "../../../utils/botones/BotonVolver";
+import { Button, Form, Input, Select } from "antd";
 
 function CuentasFormulario() {
   return (
     <>
-        
+      <h1>Agregar cuenta</h1>
+      <Form
+        name="wrap"
+        labelCol={{
+          flex: "110px",
+        }}
+        labelAlign="left"
+        labelWrap
+        wrapperCol={{
+          flex: 1,
+        }}
+        colon={false}
+        style={{
+          maxWidth: 600,
+        }}
+      >
+        <Form.Item
+          label="Nombre"
+          name="Nombre"
+          rules={[
+            {
+              required: true,
+            },
+          ]}
+        >
+          <Input />
+        </Form.Item>
+
+        <Form.Item label="Descripción" name="Descripcion">
+          <Input />
+        </Form.Item>
+
+        <Form.Item label="Monto" name="Monto">
+          <Input />
+        </Form.Item>
+
+        <Form.Item label="Tipo de cuenta">
+          <Select>
+            <Select.Option value="demo1">Demo1</Select.Option>
+            <Select.Option value="demo2">Demo2</Select.Option>
+            <Select.Option value="demo3">Demo3</Select.Option>
+          </Select>
+        </Form.Item>
+
+        <Form.Item label=" ">
+          <Button type="primary" htmlType="submit">
+            Aceptar
+          </Button>
+        </Form.Item>
+      </Form>
       <BotonVolver />
     </>
   );
